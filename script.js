@@ -9,15 +9,13 @@ var randomNumber = function(min, max) {
 
 function generatePassword () {
   
-  // 0:lowercase letters
-  // 1:uppercase letters
-  // 2:numerical values
-  // 3:special characters
+  
   const characters = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     numbers: "123456789",
     specialChar: "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+    // special character (") not inclued issue 1 **************************
   }
 
   //variable for the selected characters
@@ -42,6 +40,8 @@ function generatePassword () {
   uppercaseOption = window.prompt("Do you want to include uppercase letters? y/n")
   numericOption = window.prompt("Do you want to include numerical values? y/n")
   specialCharOption = window.prompt("Do you want to include special character? y/n")
+
+  // *******************I hv t d while loop until correct answer prompt issue 2
 
   // How many character will the pasword have
   var passwordLength = 0 

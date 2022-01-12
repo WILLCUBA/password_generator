@@ -10,12 +10,11 @@ var randomNumber = function(min, max) {
 function generatePassword () {
   
   
-  const characters = {
+  var characters = {
     lowercase: "abcdefghijklmnopqrstuvwxyz",
     uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     numbers: "123456789",
     specialChar: "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
-    // special character (") not inclued issue 1 **************************
   }
 
   //variable for the selected characters
@@ -32,16 +31,15 @@ function generatePassword () {
   // Prompt for the lenght of the password
   
   window.alert("How many characters do you want the password to have?")
-  passwordLengthOptions = window.prompt("Type: 1 to (at lest 3 and no more than 8) ||| Type: 2 to (at least 8 and no more than 128)")
+  passwordLengthOptions = window.prompt("Type: 1 to (at lest 3 and no more than 8) or Type: 2 to (at least 8 and no more than 128)")
 
   // Prompts for character types
   
-  lowercaseOption = window.prompt("Do you want to include lowercase letters? y/n")
-  uppercaseOption = window.prompt("Do you want to include uppercase letters? y/n")
-  numericOption = window.prompt("Do you want to include numerical values? y/n")
-  specialCharOption = window.prompt("Do you want to include special character? y/n")
+  lowercaseOption = window.prompt("Do you want to include lowercase letters? Type 'y' to (yes) or 'n' to (no) y/n")
+  uppercaseOption = window.prompt("Do you want to include uppercase letters? Type 'y' to (yes) or 'n' to (no) y/n")
+  numericOption = window.prompt("Do you want to include numerical values? Type 'y' to (yes) or 'n' to (no) y/n")
+  specialCharOption = window.prompt("Do you want to include special character? Type 'y' to (yes) or 'n' to (no) y/n")
 
-  // *******************I hv t d while loop until correct answer prompt issue 2
 
   // How many character will the pasword have
   var passwordLength = 0 

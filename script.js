@@ -30,8 +30,7 @@ function generatePassword () {
   
   // Prompt for the lenght of the password
   
-  window.alert("How many characters do you want the password to have?")
-  passwordLengthOptions = window.prompt("Type: 1 to (at lest 3 and no more than 8) or Type: 2 to (at least 8 and no more than 128)")
+  passwordLengthOptions = window.prompt("How many characters do you want the password to have? (Type a number)")
 
   // Prompts for character types
   
@@ -42,12 +41,7 @@ function generatePassword () {
 
 
   // How many character will the pasword have
-  var passwordLength = 0 
-  if (passwordLengthOptions === "1") {
-    passwordLength = randomNumber(3,8);
-  } else if (passwordLengthOptions === "2") {
-    passwordLength = randomNumber(8,128);
-  }
+  var passwordLength = parseInt(passwordLengthOptions) 
 
   // Selected characters types
   if (lowercaseOption === "y") {

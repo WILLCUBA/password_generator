@@ -30,8 +30,17 @@ function generatePassword () {
   
   // Prompt for the lenght of the password
   
-  passwordLengthOptions = window.prompt("How many characters do you want the password to have? (Type a number)")
-
+  while (true) {
+    passwordLengthOptions = window.prompt("How many characters do you want the password to have? (Type a number between 8 and 128)")
+    passwordLengthOptions = parseInt(passwordLengthOptions)
+    console.log(typeof(passwordLengthOptions))
+    if (passwordLengthOptions > 7 && passwordLengthOptions < 129) {
+      passwordLength = passwordLengthOptions;
+      break
+    } else {
+      alert("You need to enter a number between 8 and 128")
+    }
+  };
   // Prompts for character types
   
   lowercaseOption = window.prompt("Do you want to include lowercase letters? Type 'y' to (yes) or 'n' to (no) y/n")
@@ -41,7 +50,7 @@ function generatePassword () {
 
 
   // How many character will the pasword have
-  var passwordLength = parseInt(passwordLengthOptions) 
+  var passwordLength = passwordLengthOptions 
 
   // Selected characters types
   if (lowercaseOption === "y") {
